@@ -1,3 +1,5 @@
+import calendar.MyCalendar;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,13 +13,13 @@ public class Main {
                     int menu = scanner.nextInt();
                     switch (menu) {
                         case 1:
-                            inputTask(scanner);
+                            MyCalendar.addTask(scanner);
                             break;
                         case 2:
-                            // todo: обрабатываем пункт меню 2
+                            MyCalendar.deleteTask(scanner);
                             break;
                         case 3:
-                            // todo: обрабатываем пункт меню 3
+                            MyCalendar.getTasksByDay(scanner);
                             break;
                         case 0:
                             break label;
@@ -28,12 +30,6 @@ public class Main {
                 }
             }
         }
-    }
-
-    private static void inputTask(Scanner scanner) {
-        System.out.print("Введите название задачи: ");
-        String taskName = scanner.next();
-        // todo
     }
 
     private static void printMenu() {
